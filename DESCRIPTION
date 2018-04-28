@@ -1,0 +1,16 @@
+Package: LassoNet
+Type: Package
+Title: LassoNet: package for 3CoSE algorithm
+Version: 0.8.3
+Date: 2018-04-27
+Author: Jonas Striaukas
+Maintainer: Jonas Striaukas <jonas.striaukas@gmail.com>
+Description: LassoNet  package contains functions to estimate a penalized regression model using 3CoSE algorithm described in the paper Striaukas and Weber (2018). Regression model has two penalty terms: 1) standard lasso and 2) network. Using this package, you can estimate both regression coefficients and network connection signs. In addition, there is a separate file (replicated.R) that replicates simulation results of the paper Striaukas and Weber (2018).
+License: GPL (>= 2)
+Imports: 
+	Rcpp (>= 0.11.5)
+Suggests: 
+	snowfall
+LinkingTo: Rcpp
+NeedsCompilation: yes
+Packaged: 2018-04-26 15:23:40 UTC; Z440
