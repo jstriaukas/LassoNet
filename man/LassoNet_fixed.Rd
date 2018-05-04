@@ -1,7 +1,7 @@
 \name{lasso.net.fixed}
 \alias{lasso.net.fixed}
 \title{
-Estimates coefficients and connection signs over the grid values (\eqn{\lambda}1, \eqn{\lambda}2) where connection signs are kept unchanged.
+Estimates slope coefficients and connection signs over the grid values of penalty parameters \eqn{\lambda}1, \eqn{\lambda}2 with fixed connection signs (Li and Li (2008) method).
 }
 \description{
 The function is largely the same as lasso.net.grid, but the network connection signs are kept unchanged. 
@@ -18,7 +18,7 @@ The function is largely the same as lasso.net.grid, but the network connection s
 \item{iscpp}{binary choice for using cpp function in coordinate updates. 1 - use C++ (default), 0 - use R.}
 \item{tol}{convergence in \eqn{\beta} tolerance level. default - 1e-6}
 }
-\details{Function loops through grid values of \eqn{\lambda}1 and \eqn{\lambda}2 until convergence. Warm starts are stored for each iterator. The warm starts are stored once coordinate updates converge.}
+\details{Function loops through the grid of values of penalty parameters \eqn{\lambda}1 and \eqn{\lambda}2 until convergence is reached. Warm starts are stored for each iterator. The warm starts are stored once the coordinate updating converges.}
 \value{
 \item{beta}{Matrix of \eqn{\beta} coefficients. Columns denote different \eqn{\lambda}1
 coefficients, rows - \eqn{\lambda}2 coefficients}
@@ -31,6 +31,8 @@ coefficients, rows - \eqn{\lambda}2 coefficients}
 Maintainer: Jonas Striaukas <jonas.striaukas@gmail.com>
 }
 \references{
+Li, C. & Li, H. (2008). \emph{Network-constrained regularization and variable selection for analysis of genomic data. Bioinformatics, 24, 1175-1182}
+
 Weber, M., Schumacher, M., & Binder, H. (2014). \emph{Regularized Regression Incorporating Network Information: Simultaneous Estimation of Covariate Coefficients and Connection Signs}  
 
 Striaukas, J. & Weber, M (2018). \emph{Network Constrained Covariate Coefficient and Connection Sign Estimation}

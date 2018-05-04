@@ -18,7 +18,7 @@ This function updates \eqn{\beta} coefficients for a given penalty parameters.
 \item{iscpp}{binary choice for using cpp function in coordinate updates. 1 - use C++ (default), 0 - use R.}
 \item{tol}{convergence tolerance level. default - 1e-6}
 }
-\details{The function updates the coefficient vector \eqn{\beta} given the data and penalty parameters.
+\details{The function updates the coefficient vector \eqn{\beta} given the data and penalty parameters \eqn{\lambda}1 and \eqn{\lambda}2.
 Convergence criterion is defined as: \eqn{\sum_{i=1}^p |\beta_{i,j} - \beta_{i,j-1}| \leq} tol.}
 \value{
 \item{beta}{updated \eqn{\beta} vector}

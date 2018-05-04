@@ -1,7 +1,7 @@
 \name{get.xi}
 \alias{get.xi}
 \title{
-Updates the estimates of the connection signs by running mini OLS models as described in Striaukas and Weber (2018).
+Updates the estimates of the connection signs by running mini OLS models as described in Striaukas and Weber (2018), see p.g. 7 step 3.
 }
 \description{
 Function updates connection signs \eqn{\hat{\xi}}.
@@ -12,7 +12,7 @@ Function updates connection signs \eqn{\hat{\xi}}.
 \item{By}{By element}
 \item{beta}{\eqn{\hat{\beta}} estimated value}
 \item{xi}{\eqn{\hat{\xi}} matrix estimated at the previous step}
-\item{M}{Penalty matrix}
+\item{M}{penalty matrix}
 }
 \details{}
 \value{

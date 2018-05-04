@@ -1,10 +1,10 @@
 \name{lasso.net.grid}
 \alias{lasso.net.grid}
 \title{
-Estimates coefficients and connection signs over the grid values (\eqn{\lambda}1, \eqn{\lambda}2).
+Estimates coefficients and connection signs over the grid of values  of penalty parameters \eqn{\lambda}1 and \eqn{\lambda}2.
 }
 \description{
-Function fits lasso and network regressions over the grid values of penalty coefficients. \eqn{\beta} updates are computed in R and C++. In addtion, function stores connection signs, number of iterations until convergence, convergence binary output and alternating signs in case divergence in connection matrix. 
+Function fits lasso and network regressions over the grid of values of penalty coefficients \eqn{\lambda}1 and \eqn{\lambda}2. \eqn{\beta} updates are either computed in R or C++ (default). In addition, function stores connection signs, number of iterations until convergence and convergence outcome.In case connection sign matrix alternates, the function also stores the last \code{alt.num} connection sign matrices. 
 }
 \usage{lasso.net.grid(x,y ,beta.0,lambda1,lambda2,M1,m.iter,n.iter,iscpp=TRUE,tol,alt.num)}
 \arguments{
@@ -20,8 +20,7 @@ Function fits lasso and network regressions over the grid values of penalty coef
 \item{tol}{convergence in \eqn{\beta} tolerance level. default - 1e-6}
 \item{alt.num}{In case connection sign matrix alternates, alt.num last iterataions are stored. default - 12 }
 }
-\details{Function loops through (using two for loops and one while loop) grid values of \eqn{\lambda}1 and \eqn{\lambda}2 until either sign matrix convergences or maximum (m.iter) number of iterations is reached. Convergence in sign matrix is checked by evaluating whether two consecutive matrices are equal. Warm starts are stored for each iterator. The first warm start is stored once coordinate updates converge given initial value for sign matrix (i.e. first iteration in sign matrix). Warm start for a new value of \eqn{\lambda}2 is stored when coordinate updates converge given initial value for sign matrix (i.e. first iteration in sign matrix, but last iteration in \eqn{\lambda}1). In addition, function checks whether signs alternate. Once the algorithm is close to the maximum number of iterations (m.iter) in sign matrix, function stores two previous sign matrices and checks whether they
-alternate (wheter sign matrix equals to the previous two steps estimated sign matrix and does not equal to one step before estimated sign matrix). Further convergence checks are done for \eqn{\beta} values when looping though sign matrix. If at least one \eqn{\beta} updating procedure did not converge, \code{false} is stored in a convergece.in.grid output matrix while otherwise \code{true} is stored.}
+\details{Function loops through (using two for loops and one while loop) the grid values of \eqn{\lambda}1 and \eqn{\lambda}2 until either sign matrix convergences or maximum (m.iter) number of iterations is reached. Convergence in sign matrix is checked by evaluating whether two consecutive matrices are equal. Warm starts are stored for each iterator. The first warm start is stored once coordinate updates converge given initial value for sign matrix (i.e. first iteration in sign matrix). Warm start for a new value of \eqn{\lambda}2 is stored when coordinate updates converge given initial value for sign matrix (i.e. first iteration in sign matrix, but last iteration in \eqn{\lambda}1). In addition, the function checks whether signs alternate. Once the algorithm is close to the maximum number of iterations (m.iter) in sign matrix, function stores two previous sign matrices and checks whether they alternate (i.e. whether the connection sign matrix equals to the previous two steps estimated sign matrix and does not equal to one step before estimated sign matrix). Further convergence checks are done for the \eqn{\beta} values when looping though the sign matrix. If at least one \eqn{\beta} updating procedure did not converge, \code{false} is stored in a convergece.in.grid output matrix while otherwise \code{true} is stored.}
 \value{
 \item{beta}{matrix of \eqn{\beta} coefficients. Columns denote different \eqn{\lambda}1
 coefficients, rows - \eqn{\lambda}2 coefficients}

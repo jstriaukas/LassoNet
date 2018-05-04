@@ -6,7 +6,7 @@ LassoNet: package for 3CoSE algorithm.
 
 }
 \description{
-LassoNet R package estimates the penalized regression model slope coefficients together with connection signs between covariates using the 3CoSE algorithm described in the paper Striaukas and Weber (2018). The regression coefficients are penalized both in \eqn{\ell_1} and \eqn{\ell_2} norms, where the latter uses a network penalty matrix. The algorithm uses warm starts for the \eqn{\beta} vector and connection sign matrix M. The main function of the package is lasso.net.grid, see example below. }
+LassoNet R package estimates a penalized regression model slope coefficients together with connection signs between covariates using the 3CoSE algorithm described in the paper Weber et. al(2014) and briefly discussed in Striaukas and Weber (2018). Regression coefficients are penalized both in \eqn{\ell_1} and \eqn{\ell_2} norms, where the latter uses a network penalty matrix. The algorithm uses warm starts for the \eqn{\beta} vector and connection sign matrix \eqn{M}. The main function of the package is lasso.net.grid, see example below. Also, the package has a separate file with functions to fully replicate the results.}
 \details{
 \tabular{ll}{
 Package: \tab LassoNet\cr

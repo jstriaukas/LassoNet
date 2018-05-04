@@ -18,7 +18,7 @@ This function updates \eqn{\beta} coefficients for a given penalty parameters.
 \item{iter}{maximum number of iterations for \eqn{\beta} updating.}
 \item{tol}{convergence tolerance level.}
 }
-\details{The function updates the coefficient vector \eqn{\beta} given the data and penalty parameters.
+\details{The function updates the coefficient vector \eqn{\beta} given the data and penalty parameters \eqn{\lambda}1 and \eqn{\lambda}2.
 Convergence criterion is defined as: \eqn{\sum_{i=1}^p |\beta_{i,j} - \beta_{i,j-1}| \leq} tol.}
 \value{
 \item{beta}{updated \eqn{\beta} vector}
