@@ -4,15 +4,15 @@
 Soft thresholding operator.
 }
 \description{
-Evaluates each element of \eqn{\beta} using soft thresholding operator.
+Soft thresholding operator.
 }
 \usage{soft.thresh(x, kappa)}
 \arguments{
 \item{x}{\eqn{\beta} coordinate}
-\item{kappa}{\eqn{\kappa} value in general or \eqn{\lambda_1} for covariance updating.}
+\item{kappa}{\eqn{\kappa} value in general or \eqn{\lambda_1} for covariance updating}
 }
 
-\details{Uses standard soft thresholding definition: \eqn{S(x,\kappa) = sign(x) (|x| - \kappa)_{+}}}
+\details{Soft thresholding definition: \eqn{S(x,\kappa) = sign(x) (|x| - \kappa)_{+}}}
 \value{
 \item{x}{value after applying soft thresholding operator}
 }

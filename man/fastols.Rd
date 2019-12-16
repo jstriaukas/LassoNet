@@ -5,7 +5,7 @@ Fast least squares estimate.
 
 }
 \description{
-Function computes least squares estimate in an efficient way.
+Computes least squares estimate in an efficient way.
 }
 \usage{fastols(y, x)}
 \arguments{

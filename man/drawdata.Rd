@@ -4,7 +4,7 @@
 Draw random data.
 }
 \description{
-Function generates random data. 
+ Generates random data. 
 }
 \usage{drawdata(n, beta)}
 \arguments{

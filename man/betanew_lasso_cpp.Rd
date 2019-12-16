@@ -4,22 +4,21 @@
 C++ subroutine that updates \eqn{\beta} coefficients.
 }
 \description{
-This function updates \eqn{\beta} coefficients for a given penalty parameters.
+This function updates \eqn{\beta} for given penalty parameters.
 }
 \usage{betanew_lasso_cpp(xx, xy, beta, M, y, Lambda1, Lambda2, iter, tol)}
 \arguments{
 \item{xx}{Bx matrix}
 \item{xy}{By vector}
-\item{beta}{initial value for \eqn{\beta}. default - zero vector of size \eqn{n \times 1}}
+\item{beta}{initial value for \eqn{\beta}; default - zero vector of size \eqn{p \times 1}}
 \item{M}{penalty matrix}
 \item{y}{response vector or size \eqn{n \times 1}}
-\item{Lambda1}{lasso penalty coefficient}
-\item{Lambda2}{network penalty coefficient}
-\item{iter}{maximum number of iterations for \eqn{\beta} updating.}
-\item{tol}{convergence tolerance level.}
+\item{Lambda1}{lasso penalty parameter}
+\item{Lambda2}{network penalty parameter}
+\item{iter}{maximum number of iterations for \eqn{\beta} step}
+\item{tol}{convergence tolerance level}
 }
-\details{The function updates the coefficient vector \eqn{\beta} given the data and penalty parameters \eqn{\lambda}1 and \eqn{\lambda}2.
-Convergence criterion is defined as: \eqn{\sum_{i=1}^p |\beta_{i,j} - \beta_{i,j-1}| \leq} tol.}
+\details{See beta.update.net}
 \value{
 \item{beta}{updated \eqn{\beta} vector}
 \item{steps}{number of steps until convergence}
@@ -30,7 +29,7 @@ Maintainer: Jonas Striaukas <jonas.striaukas@gmail.com>
 \references{
 Weber, M., Schumacher, M., & Binder, H. (2014) \emph{Regularized Regression Incorporating Network Information: Simultaneous Estimation of Covariate Coefficients and Connection Signs}  
 
-Striaukas, J. & Weber, M. (2018) \emph{Network Constrained Covariate Coefficient and Connection Sign Estimation}
+Weber, M., Striaukas, J., Schumacher, M., & Binder, H. (2018) \emph{Network Constrained Covariate Coefficient and Connection Sign Estimation}
 }
 
 \examples{
