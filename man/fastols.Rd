@@ -22,6 +22,6 @@ p<-10
 n<-100
 x<-matrix(rnorm(n*p),n,p)
 beta<-array(5, c(p,1))
-y<-x%*%beta + rnorm(n,mean=0,sd=0.1)
+y<-x\%*\%beta + rnorm(n,mean=0,sd=0.1)
 fastols(y,x)
 }

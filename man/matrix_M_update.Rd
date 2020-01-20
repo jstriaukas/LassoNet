@@ -18,11 +18,8 @@ Updates M using relation \eqn{(M)_{ij} = -\hat{\xi}_{ij} |(M_1)|_{ij}}.
 \author{
 Maintainer: Jonas Striaukas <jonas.striaukas@gmail.com>
 }
-\references{
-Weber, M., Schumacher, M., & Binder, H. (2014) \emph{Regularized Regression Incorporating Network Information: Simultaneous Estimation of Covariate Coefficients and Connection Signs}  
+\references{Weber, M., Striaukas, J., Schumacher, M., Binder, H. "Network-Constrained Covariate Coefficient and Connection Sign Estimation" (2018) <doi:10.2139/ssrn.3211163>}
 
-Weber, M., Striaukas, J., Schumacher, M., & Binder, H. (2018) \emph{Network Constrained Covariate Coefficient and Connection Sign Estimation}
-}
 \examples{
 p<-100
 M<-diag(p)

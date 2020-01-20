@@ -28,11 +28,7 @@ Convergence criterion is defined as \eqn{\sum_{i=1}^p |\beta_{i,j} - \beta_{i,j-
 \author{
 Maintainer: Jonas Striaukas <jonas.striaukas@gmail.com>
 }
-\references{
-Weber, M., Schumacher, M., & Binder, H. (2014) \emph{Regularized Regression Incorporating Network Information: Simultaneous Estimation of Covariate Coefficients and Connection Signs}  
-
-Weber, M., Striaukas, J., Schumacher, M., & Binder, H. (2018) \emph{Network Constrained Covariate Coefficient and Connection Sign Estimation}
-}
+\references{Weber, M., Striaukas, J., Schumacher, M., Binder, H. "Network-Constrained Covariate Coefficient and Connection Sign Estimation" (2018) <doi:10.2139/ssrn.3211163>}
 
 \examples{
 p<-200

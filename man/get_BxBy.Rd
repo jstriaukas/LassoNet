@@ -25,11 +25,7 @@ values in a given penalty matrix.}
 \author{
 Maintainer: Jonas Striaukas <jonas.striaukas@gmail.com>
 }
-\references{
-Weber, M., Schumacher, M., & Binder, H. (2014) \emph{Regularized Regression Incorporating Network Information: Simultaneous Estimation of Covariate Coefficients and Connection Signs}  
-
-Weber, M., Striaukas, J., Schumacher, M., & Binder, H. (2018) \emph{Network Constrained Covariate Coefficient and Connection Sign Estimation}
-}
+\references{Weber, M., Striaukas, J., Schumacher, M., Binder, H. "Network-Constrained Covariate Coefficient and Connection Sign Estimation" (2018) <doi:10.2139/ssrn.3211163>}
 
 \examples{
 p<-200

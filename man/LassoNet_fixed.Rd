@@ -1,10 +1,9 @@
-`\name{lasso.net.fixed}
+\name{lasso.net.fixed}
 \alias{lasso.net.fixed}
 \title{
-Estimates coefficients and connection signs over the grid values of penalty parameters \eqn{\lambda}1, \eqn{\lambda}2 with fixed connection signs.
-}
+Estimates coefficients over the grid values of penalty parameters.}
 \description{
-See lasso.net.grid.
+See lasso.net.grid
 }
 \usage{lasso.net.fixed(x,y,beta.0,lambda1,lambda2,M1,n.iter,iscpp,tol)}
 \arguments{
@@ -30,13 +29,8 @@ coefficients, rows - \eqn{\lambda}2 coefficients}
 \author{
 Maintainer: Jonas Striaukas <jonas.striaukas@gmail.com>
 }
-\references{
-Li, C. & Li, H. (2008). \emph{Network-constrained regularization and variable selection for analysis of genomic data. Bioinformatics, 24, 1175-1182}
+\references{Weber, M., Striaukas, J., Schumacher, M., Binder, H. "Network-Constrained Covariate Coefficient and Connection Sign Estimation" (2018) <doi:10.2139/ssrn.3211163>}
 
-Weber, M., Schumacher, M., & Binder, H. (2014). \emph{Regularized Regression Incorporating Network Information: Simultaneous Estimation of Covariate Coefficients and Connection Signs}  
-
-Weber, M., Striaukas, J., Schumacher, M., & Binder, H. (2018) \emph{Network Constrained Covariate Coefficient and Connection Sign Estimation}
-}
 
 \examples{
 p=200
@@ -47,5 +41,5 @@ y=rnorm(n,mean=0,sd=1)
 lambda1=c(0,1)
 lambda2=c(0,1)
 M1=diag(p)
-lasso.net.grid(x, y, beta.0, lambda1, lambda2, M1)
+lasso.net.fixed(x, y, beta.0, lambda1, lambda2, M1)
 }
