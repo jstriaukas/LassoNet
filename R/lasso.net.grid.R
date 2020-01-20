@@ -73,11 +73,11 @@ lasso.net.grid <- function(x ,y ,beta.0 = array(0,length(y)) ,lambda1=c(0,1) ,la
   for (j in 1:n1) {
     # loop through lambda1
     
-    cat("Looping through lambda1 - ", j, "\n") 
+    #message("Looping through lambda1 - ", j, "\n") 
     for (i in 1:n2) {
       
       # loop through lambda2
-      cat("Looping through lambda2 - ", i, "\n") 
+      #message("Looping through lambda2 - ", i, "\n") 
       # store check value for beta convergence given updated M 
       betaconv <- FALSE
       # while loop for xi convegence
@@ -124,7 +124,7 @@ lasso.net.grid <- function(x ,y ,beta.0 = array(0,length(y)) ,lambda1=c(0,1) ,la
         # updating beta for lambda2 warm start
         beta <- est$beta
         if(betaconv == FALSE) { 
-          cat("coordinate descent did not converge", beta, "/n")
+          #message("coordinate descent did not converge", beta, "/n")
         }
       } # Iterations through sign Matrix finishes here. [either converged or signs alternate]
       
